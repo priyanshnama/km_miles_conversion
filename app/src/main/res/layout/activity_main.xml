@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_miles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/miles"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/miles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/miles" />
+
+    <TextView
+        android:id="@+id/txt_km"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/km"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/km"
+        app:layout_constraintEnd_toEndOf="@+id/txt_miles"
+        app:layout_constraintTop_toTopOf="@+id/km" />
+
+    <Button
+        android:id="@+id/tokm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="@string/convert_miles_to_km"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/km" />
+
+    <Button
+        android:id="@+id/tomiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/convert_km_to_miles"
+        app:layout_constraintEnd_toEndOf="@+id/tokm"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tokm"
+        app:layout_constraintTop_toBottomOf="@+id/tokm" />
+
+    <EditText
+        android:id="@+id/miles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="168dp"
+        android:ems="10"
+        android:hint="@string/miles"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/txt_miles"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="0.00" />
+
+    <EditText
+        android:id="@+id/km"
+        android:layout_width="wrap_content"
+        android:hint="@string/km"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/miles"
+        app:layout_constraintTop_toBottomOf="@+id/miles"
+        android:autofillHints="0.00" />
+</androidx.constraintlayout.widget.ConstraintLayout>
